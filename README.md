@@ -103,3 +103,21 @@ console.log(demo());
 - 更改全局包的安装路径的权限（不推荐）
  1 找到npm 的文件夹（npm config get prefix）
  2 将文件夹拥有者改为你自己（sudo chown -R `whoami` <directory>）
+
+
+## npm离线安装的解决方案
+
+1 Registry 代理
+
+ - npm-proxy-cache(npm --proxy http://localhost:8080 --https-proxy http://localhost:8080 --strict-ssl false install)
+ - local-npm(npm set registry http://127.0.0.1:5080)
+ - npm-lazy(npm --registry http://localhost:8080/ install socket.io)
+
+2 npm-cache install替代
+
+ - npm-cache install
+
+3 node_modules作为缓存目录
+
+ - [Freight](https://github.com/node-freight/freight)
+ - [npmbox](https://github.com/arei/npmbox)
