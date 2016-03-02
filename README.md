@@ -88,10 +88,14 @@ console.log(demo());
 ## 8、更改全部模块路径
 
 - 更改全局包的安装路径（推荐）
- 1 在你想要存放全局的包的路径下创建文件夹（mkdir ~/.npm-global）
- 2 设置新的全局文件路径（npm config set prefix ‘~/.npm-global’）
- 3 更改profile文件,添加以下代码, 因为此方法导致一个问题，cli命令全局安装的时候不能运行，所以我们要添加一下路径（export PATH=~/npm-global/bin:/home/cur_user/.npm-global/bin:$PATH）
- 4 更新系统变量（source ~/.profile）
+
+  1 在你想要存放全局的包的路径下创建文件夹（mkdir ~/.npm-global）
+
+  2 设置新的全局文件路径（npm config set prefix ‘~/.npm-global’）
+  
+  3 更改profile文件,添加以下代码, 因为此方法导致一个问题，cli命令全局安装的时候不能运行，所以我们要添加一下路径（export PATH=~/npm-global/bin:/home/cur_user/.npm-global/bin:$PATH）
+  
+  4 更新系统变量（source ~/.profile）
  ```
  详情请看 https://docs.npmjs.com/getting-started/fixing-npm-permissions
  ```
